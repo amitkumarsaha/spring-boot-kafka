@@ -41,7 +41,7 @@ import com.amit.boot.kafka.Consumer;
 @SpringBootTest
 @TestPropertySource(properties = "spring.kafka.bootstrap-servers=${spring.embedded.kafka.brokers}")
 @EmbeddedKafka
-public class SampleKafkaApplicationTests {
+public class KafkaApplicationTests {
 
 	private static final CountDownLatch latch = new CountDownLatch(1);
 

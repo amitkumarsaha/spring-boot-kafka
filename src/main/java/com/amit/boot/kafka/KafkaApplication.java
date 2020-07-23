@@ -22,17 +22,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SampleKafkaApplication {
+public class KafkaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SampleKafkaApplication.class, args);
+        SpringApplication.run(KafkaApplication.class, args);
     }
 
     @Bean
     public ApplicationRunner runner(Producer producer) {
         return (args) -> {
             for(int i = 1; i < 20; i++) {
-//                    producer.send(new SampleMessage(i, "A simple test message"));
+                    producer.send(new SampleMessage(i, "A simple test message"));
             }
         };
     }
